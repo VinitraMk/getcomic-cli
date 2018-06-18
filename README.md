@@ -37,7 +37,7 @@ A headless browser is required for this tool to automate web page interaction. T
             `python3 setup.py build`  
             `python3 setup.py install`  
 
-## Running the tests
+## Usage 
 
 1. After installation is done, run the command `getcomic` and provide a readcomiconline url and the name of the directory where you want to 
 download your files as arguments, as shown below.
