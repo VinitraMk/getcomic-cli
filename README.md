@@ -19,16 +19,17 @@ What things you need to install the software and how to install them
 
 ### Installation
 
-A step by step series of examples that tell you how to get a development env running
+#### Install using pip
+`sudo pip3 install getcomic`  
 
-<!--
-1. Install all the prerequisites in your machine.
-2. A headless browser is required for this tool to automate web page interaction. The browser used here is PhantomJS. Install it using npm.  
+#### Install from source
+1. Clone this repo to your local machine
+2. Install all the prerequisites in your machine.
+3. A headless browser is required for this tool to automate web page interaction. The browser used here is PhantomJS. Install it using npm.  
     `sudo npm install phantomjs-prebuilt`
-3. Install the requirements for the command tool using the command  
+4. Install the requirements for the command tool using the command  
     `sudo pip3 install -r requirements.txt`
-4. Install now using pip  
-    `sudo pip3 install getcomic`-->
+5. Install
 
 ## Running the tests
 
