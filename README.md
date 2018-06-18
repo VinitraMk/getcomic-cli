@@ -57,7 +57,7 @@ download your files as arguments, as shown below.
 
 The directory name you specified will be created in the home folder if not already present.
 
-![](ezgif.com-gif-maker.gif)
+![](usage.gif)
 
 
 ## Authors
