@@ -43,7 +43,7 @@ def main():
     filename=names[0]+'-'+names[1]+'.pdf'
 
     #Edit url to download all pages of the comic
-    editurl=str(site)+"&readType=1"
+    editurl=str(site)+"?readType=1"
 
     print('\nFetching comic...\n')
 
@@ -130,6 +130,4 @@ def createpdf(urls,sz,chapterpath,filename):
     print('\n\nBuilding pdf...\n')
     pdf.output(filename,"F")
 
-'''if __name__=="__main__":
-    main()'''
 

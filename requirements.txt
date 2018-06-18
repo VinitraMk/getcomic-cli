@@ -1,3 +1,5 @@
 fpdf
 selenium
 urllib
+pathlib
+FPDF
