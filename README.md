@@ -40,9 +40,11 @@ A headless browser is required for this tool to automate web page interaction. T
 ## Running the tests
 
 1. After installation is done, run the command `getcomic` and provide a readcomiconline url and the name of the directory where you want to 
-download your files as arguments, as shown below
+download your files as arguments, as shown below.
 
-![](commandss.png?raw=true)
+![](commandss.png?raw=true)  
+
+The directory name you specified will be created in the home folder if not already present.
 
 ## Authors
 
