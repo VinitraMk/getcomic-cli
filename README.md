@@ -7,6 +7,9 @@ A command line tool to download comics from readcomiconline.to
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+### Supported OS
+Ubuntu
+
 ### Prerequisites
 
 ```
@@ -18,17 +21,16 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installation
 
 1. **Install a headless browser**  
-A headless browser is required for this tool to automate web page interaction. The browser used here is PhantomJS. Install it using npm.  
+A headless browser is required for this tool to automate web page interaction. The browser used here is PhantomJS. Install it using npm.
     `sudo npm install phantomjs-prebuilt`  
-**Note: Do not install phantomjs-prebuilt globally. Install it in a local folder**
+**Note: Do not install phantomjs-prebuilt globally. Install it locally i.e don't use -g in the npm command**
 
 2. **Install the package**  
     * **Using pip**  
     `sudo pip3 install getcomic`  
 
     * **From source**   
-        1. Clone this repo to your local machine and navigate to this folder in your machine.  
-            `sudo npm install phantomjs-prebuilt`
+        1. Clone this repo and navigate to this folder in your machine.  
         2. Install the requirements for the command tool using the command  
             `sudo pip3 install -r requirements.txt`
         3. Install using the following commands now.  
@@ -37,15 +39,10 @@ A headless browser is required for this tool to automate web page interaction. T
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+1. After installation is done, run the command `getcomic` and provide a readcomiconline url and the name of the directory where you want to 
+download your files as arguments, as shown below
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+![](commandss.png?raw=true)
 
 ### And coding style tests
 
