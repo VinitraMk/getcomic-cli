@@ -27,8 +27,7 @@ A headless browser is required for this tool to automate web page interaction. T
     2. To upgrade google-chrome in Ubuntu 16.04 LTS, run the following command.  
     `sudo apt-get --only-upgrade install google-chrome-stable`
     3. Now you need a Chrome Driver. Download the latest release of ChromeDriver from this [site](https://sites.google.com/a/chromium.org/chromedriver/home)
-    4. Navigate to the folder where you downloaded Chrome Driver and extract it's contents. Install the Chrome Driver by running the following com
-    mands.  
+    4. Navigate to the folder where you downloaded Chrome Driver and extract it's contents. Install the Chrome Driver by running the following commands.  
     ```
     sudo chmod +x chromedriver
     sudo mv -f chromedriver /usr/local/share/chromedriver  
