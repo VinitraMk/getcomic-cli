@@ -18,7 +18,7 @@ Ubuntu
   3. pip3
 ```
 
-### Installation
+## Installation
 
 1. **Install a headless browser**  
 A headless browser is required for this tool to automate web page interaction. The browser used here is PhantomJS. Install it using npm.  
