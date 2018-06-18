@@ -20,10 +20,24 @@ Ubuntu
 
 ## Installation
 
-1. **Install a headless browser**  
-A headless browser is required for this tool to automate web page interaction. The browser used here is PhantomJS. Install it using npm.  
-    `sudo npm install phantomjs-prebuilt`  
-***Note: Do not install phantomjs-prebuilt globally. Install it locally i.e don't use -g in the npm command***
+1. **Install a headless browser**    
+
+A headless browser is required for this tool to automate web page interaction. The browser used here is Chrome.  
+
+    1. Install the latest version of chrome browser in your machine. Follow this [link](https://gist.github.com/mrtns/78d15e3263b2f6a231fe) 
+    for the same.
+    2. To upgrade google-chrome in Ubuntu 16.04 LTS, run the following command.  
+    `sudo apt-get --only-upgrade install google-chrome-stable`
+    3. Now you need a Chrome Driver. Download the latest release of ChromeDriver from this [site](https://sites.google.com/a/chromium.org/chromedr
+    iver/home)
+    4. Navigate to the folder where you downloaded Chrome Driver and extract it's contents. Install the Chrome Driver by running the following com
+    mands.  
+    ```
+    sudo chmod +x chromedriver
+    sudo mv -f chromedriver /usr/local/share/chromedriver  
+    sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+    sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
+    ```
 
 2. **Install the package**  
     * **Using pip**  
@@ -31,8 +45,7 @@ A headless browser is required for this tool to automate web page interaction. T
 
     * **From source**   
         1. Clone this repo and navigate to this folder in your machine.  
-        2. Install phantomjs-prebuilt in this directory.  
-        3. Install using the following commands now.   
+        2. Install using the following commands now.   
             `python3 setup.py build`  
             `python3 setup.py install`  
 

@@ -218,7 +218,11 @@ def extractnames(site,isissue):
 
 def fetchcomic(url,curdirpath):
     #Open webdriver & read html source code of webpage
-    browser=webdriver.PhantomJS(executable_path=curdirpath+'/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs')
+    #browser=webdriver.PhantomJS(executable_path=curdirpath+'/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs')
+    options=webdriver.ChromeOptions()
+    options.binary_location='/usr/bin/google-chrome-stable'
+    options.add_argument('headless')
+    browser=webdriver.Chrome(chrome_options=options)
     browser.get(url)
     try:
         element=WebDriverWait(browser,10).until(EC.presence_of_element_located((By.ID,"stSegmentFrame")))
