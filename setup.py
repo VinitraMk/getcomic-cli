@@ -1,4 +1,10 @@
 from setuptools import setup
+
+dependencies=['fpdf','selenium','urllib','pathlib']
+
+with open("README.md",'r') as f:
+    long_description=f.read()
+
 setup(
         name='getcomic',
         description='A command line tool to download comics from readcomiconline.to',
@@ -8,7 +14,8 @@ setup(
         packages=[
             'getcomic'
         ],
-        version="1.0.1",
+        version="1.0.2",
+        install_requires=dependencies,
         entry_points={
             'console_scripts':[
                 'getcomic=getcomic.getcomic:main',

@@ -1,5 +1,7 @@
 node_modules/
 dist/
 getcomic.egg-info/
+build/
+virtual/
 ghostdriver.log
 
