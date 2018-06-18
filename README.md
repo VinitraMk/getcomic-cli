@@ -21,9 +21,9 @@ Ubuntu
 ### Installation
 
 1. **Install a headless browser**  
-A headless browser is required for this tool to automate web page interaction. The browser used here is PhantomJS. Install it using npm.
+A headless browser is required for this tool to automate web page interaction. The browser used here is PhantomJS. Install it using npm.  
     `sudo npm install phantomjs-prebuilt`  
-**Note: Do not install phantomjs-prebuilt globally. Install it locally i.e don't use -g in the npm command**
+***Note: Do not install phantomjs-prebuilt globally. Install it locally i.e don't use -g in the npm command***
 
 2. **Install the package**  
     * **Using pip**  
@@ -43,18 +43,6 @@ A headless browser is required for this tool to automate web page interaction. T
 download your files as arguments, as shown below
 
 ![](commandss.png?raw=true)
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Authors
 
