@@ -4,8 +4,8 @@
 A command line tool to download comics from readcomiconline.to
 
 ## Features
-1. Download comics from readcomiconline.to by providing the url of a single issue of a comic 
-2. Download the entire series of a particular comic by providing the url of a comic series
+* Download comics from readcomiconline.to by providing the url of a single issue of a comic 
+* Download the entire series of a particular comic by providing the url of a comic series
 
 ## Getting Started
 
