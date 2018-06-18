@@ -19,7 +19,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. **Install a headless browser**  
 A headless browser is required for this tool to automate web page interaction. The browser used here is PhantomJS. Install it using npm.  
-    `sudo npm install phantomjs-prebuilt`
+    `sudo npm install phantomjs-prebuilt`  
+**Note: Do not install phantomjs-prebuilt globally. Install it in a local folder**
 
 2. **Install the package**  
     * **Using pip**  
