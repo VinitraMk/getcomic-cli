@@ -12,9 +12,11 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Markup : * Python3
-         * Node
-         * pip3
+
+  * Python3
+  * Node
+  * pip3
+
 ```
 
 ### Installing
