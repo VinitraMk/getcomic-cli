@@ -12,30 +12,19 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-
-  * Python3
-  * Node
-  * pip3
-
+  1. Python3
+  2. Node
+  3. pip3
 ```
 
-### Installing
+### Installation
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+1. Install all the prerequisites in your machine.
+2. A headless browser is required for this tool to automate web page interaction. The browser used here is PhantomJS. Install it using npm
+    `sudo npm install phantomjs-prebuilt`
+3. dfsd
 
 ## Running the tests
 
