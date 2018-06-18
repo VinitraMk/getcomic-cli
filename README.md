@@ -21,9 +21,7 @@ Ubuntu
 ## Installation
 
 1. **Install a headless browser**    
-
-A headless browser is required for this tool to automate web page interaction. The browser used here is Chrome.  
-
+A headless browser is required for this tool to automate web page interaction. The browser used here is Chrome. 
     1. Install the latest version of chrome browser in your machine. Follow this [link](https://gist.github.com/mrtns/78d15e3263b2f6a231fe) 
     for the same.
     2. To upgrade google-chrome in Ubuntu 16.04 LTS, run the following command.  
