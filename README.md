@@ -46,7 +46,7 @@ download your files as arguments, as shown below
 
 ## Authors
 
-* **Vinitra Muralikrishnan** - *Initial work* - [VinitraMk](https://github.com/VinitraMk)
+* **Vinitra Muralikrishnan** - [VinitraMk](https://github.com/VinitraMk)
 See also the list of [contributors](https://github.com/VinitraMk/getcomic-cli/contributors) who participated in this project.
 
 ## License
