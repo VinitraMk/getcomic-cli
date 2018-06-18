@@ -3,6 +3,10 @@
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)  
 A command line tool to download comics from readcomiconline.to
 
+## Features
+1. Download comics from readcomiconline.to by providing the url of a single issue of a comic 
+2. Download the entire series of a particular comic by providing the url of a comic series
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -52,6 +56,7 @@ download your files as arguments, as shown below.
 ![](commandss.png?raw=true)  
 
 The directory name you specified will be created in the home folder if not already present.
+
 
 ## Authors
 
