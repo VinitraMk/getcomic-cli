@@ -1,6 +1,6 @@
 # getcomic-cli 
 
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)  
 A command line tool to download comics from readcomiconline.to
 
 ## Getting Started
@@ -12,7 +12,9 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Give examples
+Python 3
+Pip
+Node
 ```
 
 ### Installing
