@@ -22,9 +22,11 @@ What things you need to install the software and how to install them
 A step by step series of examples that tell you how to get a development env running
 
 1. Install all the prerequisites in your machine.
-2. A headless browser is required for this tool to automate web page interaction. The browser used here is PhantomJS. Install it using npm
+2. A headless browser is required for this tool to automate web page interaction. The browser used here is PhantomJS. Install it using npm.  
     `sudo npm install phantomjs-prebuilt`
-3. dfsd
+3. Install the requirements for the command tool using the command  
+    `sudo pip3 install -r requirements.txt`
+
 
 ## Running the tests
 
