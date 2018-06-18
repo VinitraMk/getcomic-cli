@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+getcomic/__init__.py
+getcomic/getcomic.py
+getcomic.egg-info/PKG-INFO
+getcomic.egg-info/SOURCES.txt
+getcomic.egg-info/dependency_links.txt
+getcomic.egg-info/entry_points.txt
+getcomic.egg-info/top_level.txt

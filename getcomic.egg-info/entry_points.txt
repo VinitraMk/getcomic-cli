@@ -1,0 +1,3 @@
+[console_scripts]
+getcomic = getcomic.getcomic:main
+
