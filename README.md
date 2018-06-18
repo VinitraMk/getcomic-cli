@@ -26,7 +26,8 @@ A step by step series of examples that tell you how to get a development env run
     `sudo npm install phantomjs-prebuilt`
 3. Install the requirements for the command tool using the command  
     `sudo pip3 install -r requirements.txt`
-
+4. Install now using pip  
+    `sudo pip3 install getcomic`
 
 ## Running the tests
 
