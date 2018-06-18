@@ -1,6 +1,6 @@
 from setuptools import setup
 
-dependencies=['fpdf','selenium','urllib','pathlib']
+dependencies=['fpdf','selenium','pathlib']
 
 with open("README.md",'r') as f:
     long_description=f.read()

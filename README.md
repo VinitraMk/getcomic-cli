@@ -31,9 +31,7 @@ A headless browser is required for this tool to automate web page interaction. T
 
     * **From source**   
         1. Clone this repo and navigate to this folder in your machine.  
-        2. Install the requirements for the command tool using the command  
-            `sudo pip3 install -r requirements.txt`
-        3. Install using the following commands now.  
+        2. Install using the following commands now.  
             `python3 setup.py build`  
             `python3 setup.py install`  
 

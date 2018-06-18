@@ -1,4 +1,3 @@
 fpdf
 selenium
-urllib
 pathlib
