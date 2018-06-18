@@ -1,5 +1,5 @@
 from setuptools import setup
-from getcomic import version
+from getcomic import __version__
 
 dependencies=['fpdf','selenium','pathlib']
 long_description=""
@@ -10,13 +10,14 @@ setup(
         name='getcomic',
         description='A command line tool to download comics from readcomiconline.to',
         long_description=long_description,
+        long_description_content_type='text/markdown',
         url='https://github.com/VinitraMk/getcomic-cli',
         author='VinitraMk',
         author_email='vinitramk@gmail.com',
         packages=[
             'getcomic'
         ],
-        version=version,
+        version=__version__,
         install_requires=dependencies,
         entry_points={
             'console_scripts':[
