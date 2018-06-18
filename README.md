@@ -1,6 +1,7 @@
-# Project Title
+# getcomic-cli 
 
-One Paragraph of project description goes here
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+A command line tool to download comics from readcomiconline.to
 
 ## Getting Started
 
