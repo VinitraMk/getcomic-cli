@@ -22,11 +22,11 @@ A headless browser is required for this tool to automate web page interaction. T
     `sudo npm install phantomjs-prebuilt`
 
 2. **Install the package**  
-    * Using pip  
+    * **Using pip**  
     `sudo pip3 install getcomic`  
 
-    * From source  
-        1. Clone this repo to your local machine and navigate to this folder in your machine.
+    * **From source**   
+        1. Clone this repo to your local machine and navigate to this folder in your machine.  
             `sudo npm install phantomjs-prebuilt`
         2. Install the requirements for the command tool using the command  
             `sudo pip3 install -r requirements.txt`
