@@ -22,18 +22,17 @@ A headless browser is required for this tool to automate web page interaction. T
     `sudo npm install phantomjs-prebuilt`
 
 2. **Install the package**  
-    * Using pip
+    * Using pip  
     `sudo pip3 install getcomic`  
 
-    * From source
-
-    1. Clone this repo to your local machine and navigate to this folder in your machine.
-        `sudo npm install phantomjs-prebuilt`
-    2. Install the requirements for the command tool using the command  
-        `sudo pip3 install -r requirements.txt`
-    3. Install using the following commands now.  
-        `python3 setup.py build`  
-        `python3 setup.py install`  
+    * From source  
+        1. Clone this repo to your local machine and navigate to this folder in your machine.
+            `sudo npm install phantomjs-prebuilt`
+        2. Install the requirements for the command tool using the command  
+            `sudo pip3 install -r requirements.txt`
+        3. Install using the following commands now.  
+            `python3 setup.py build`  
+            `python3 setup.py install`  
 
 ## Running the tests
 
@@ -59,25 +58,13 @@ Give an example
 
 Add additional notes about how to deploy this on a live system
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Vinitra Muralikrishnan** - *Initial work* - [VinitraMk](https://github.com/VinitraMk)
 
 ## License
 
@@ -85,7 +72,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+**Hat tip to stackoverflow**
 
