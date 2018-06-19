@@ -3,5 +3,7 @@ dist/
 getcomic.egg-info/
 build/
 virtual/
+__pycache__/
 ghostdriver.log
+__init__.pyc
 
