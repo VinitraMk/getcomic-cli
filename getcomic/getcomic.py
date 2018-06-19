@@ -105,7 +105,10 @@ def main():
 
 
 def entireseries(name,murl,chapterpath,curdirpath):
-    browser=webdriver.PhantomJS(executable_path=curdirpath+'/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs')
+    options=webdriver.ChromeOptions()
+    options.add_argument('headless')
+    browser=webdriver.Chrome(chrome_options=options)
+
     browser.get(murl)
     try:
         element=WebDriverWait(browser,10).until(EC.presence_of_element_located((By.ID,"stSegmentFrame")))
