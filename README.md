@@ -17,7 +17,7 @@ Ubuntu
 
 ```
   1. Python3
-  3. pip3
+  2. pip3
 ```
 
 ### Installation
