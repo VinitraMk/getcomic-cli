@@ -82,6 +82,24 @@ def main():
         else:
             uod={}
             print('\nNo of issues in '+names[0]+': '+str(isz)+'\n')
+            ch=input('Would you like to download the series partially [y/n]? ')
+            v1=-1
+            v2=-1
+            a1=-1
+            a2=-1
+            an=''
+            chs=''
+            if ch=='y':
+                an=input('Are issues in range annual issues [y/n]? ')
+                print()
+                if an=='y':
+                    a1,a2=[int(x) for x in input('Enter the annual issues range: ').split()]
+                    print()
+                chs=input('Would you like to download additional issues [y/n]? ')
+                if chs=='y':
+                    v1,v2=[int(x) for x in input('\nEnter the issue no range you wish to download: ').split()]
+                    print()
+
             for line in ilinks:
                 if line.find('/Comic')==0:
                     tarr=line.split('/')
@@ -95,10 +113,21 @@ def main():
             done=True
 
             for di in dmap:
-                print('\nDownloading issue '+dmap[di].issue+' of comic '+names[0]+' ...\n')
-                done&=singlecomic(dmap[di].cname,dmap[di].issue,dmap[di].link,chapterpath,curdirpath)
+                #print('\nDownloading issue '+dmap[di].issue+' of comic '+names[0]+' ...\n')
+                tel=dmap[di].issue.split('-')
+                subno=int(tel[-1])
+                sub=tel[-2]
+                if(an=='y' and subno>=a1 and subno<=a2 and sub=='Annual'):
+                    print('\nDownloading issue '+dmap[di].issue+' of comic '+names[0]+' ...\n')
+                    done&=singlecomic(dmap[di].cname,dmap[di].issue,dmap[di].link,chapterpath,curdirpath)
+                if(chs=='y' and subno>=v1 and subno<=v2 and sub!='Annual'):
+                    print('\nDownloading issue '+dmap[di].issue+' of comic '+names[0]+' ...\n')
+                    done&=singlecomic(dmap[di].cname,dmap[di].issue,dmap[di].link,chapterpath,curdirpath)
+                if ch=='n':
+                    print('\nDownloading issue '+dmap[di].issue+' of comic '+names[0]+' ...\n')
+                    done&=singlecomic(dmap[di].cname,dmap[di].issue,dmap[di].link,chapterpath,curdirpath)
             if done:
-                print('\nPdfs of all issues are ready :-D\nEnjoy reading',dmap[di].cname,'!\n')
+                print('\nPdfs of all issues you want are ready :-D\nEnjoy reading',dmap[di].cname,'!\n')
 
     #os.chdir(curdirpath)
     print()

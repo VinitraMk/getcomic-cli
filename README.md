@@ -6,6 +6,7 @@ A command line tool to download comics from readcomiconline.to
 ## Features
 * Download comics from readcomiconline.to by providing the url of a single issue of a comic 
 * Download the entire series of a particular comic by providing the url of a comic series
+* Download a given range of issues provided as input from the user
 
 ## Getting Started
 
@@ -16,7 +17,6 @@ Ubuntu
 
 ```
   1. Python3
-  2. Node
   3. pip3
 ```
 
