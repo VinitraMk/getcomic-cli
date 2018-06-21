@@ -5,6 +5,7 @@ import urllib
 import collections
 from fpdf import FPDF
 from pathlib import Path
+from PIL import Image
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -288,17 +289,24 @@ def createpdf(urls,sz,chapterpath,filename):
     i=1
     progress='==>| '
     pdf=FPDF('P','mm','A4')
-    x,y,w,h=0,0,200,250
+    x,y,w,h=0,0,210,297
     stat='Completed: '
     for url in urls:
-        tfn=str(i)+'.jpg'
+        tfn=str(i)
+        res=urllib.request.urlopen(url)
+        contype=res.info().get_content_subtype()
+        #print(contype)
+        if contype=='jpeg':
+            tfn=tfn+'.jpg'
+        elif contype=='png':
+            tfn=tfn+'.png'
         fp=open(tfn,'wb')
-        fp.write(urllib.request.urlopen(url).read())
+        fp.write(res.read())
         fp.close()
+        origimg=Image.open(chapterpath+'/'+tfn)
         pdf.add_page()
         pdf.image(chapterpath+'/'+tfn,x,y,w,h)
         os.remove(tfn)
-        #pdf.image(url,x,y,w,h)
         p=str(int(i/sz*100))
         i=i+1
         progress='='+progress
