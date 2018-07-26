@@ -33,12 +33,15 @@ def main():
     print('\nTo stop the script press Ctrl+C\n')
     #Get current directory path
     curdirpath=os.getcwd()
+    #print(curdirpath)
 
     #Get site name
     site=sys.argv[1]
+    print(site)
 
     #Detect link types
     types=detectlinktype(site)
+    #print(types)
 
     if types[0]==False and types[1]==False:
         print('\nInvalid Url\n')
@@ -51,7 +54,10 @@ def main():
         os.makedirs(dest)
 
     #Edit url to download all pages of the comic
-    editurl=str(site)+'?readType=1'
+    if types[4]=="readcomiconline":
+        editurl=str(site)+'?readType=1'
+    else:
+        editurl=str(site)+'&readType=1'
 
     if types[0]==True or types[1]==True:
         if types[2]==False and types[3]==False:
@@ -59,6 +65,7 @@ def main():
 
     #Extract comic name and issue no from url
     names=extractnames(site,types[1])
+    #print(names)
 
     #Create Directory for the comic if it doesn't already exists
     tdir=dest+"/"+names[0]
@@ -116,19 +123,29 @@ def main():
             for di in dmap:
                 #print('\nDownloading issue '+dmap[di].issue+' of comic '+names[0]+' ...\n')
                 tel=dmap[di].issue.split('-')
-                subno=int(tel[-1])
-                sub=tel[-2]
-                if(an=='y' and subno>=a1 and subno<=a2 and sub=='Annual'):
+                #subno=int(tel[-1])
+                subno=-1
+                subst=""
+                if(tel[-1].isdigit()):
+                    subno=int(tel[-1])
+                else:
+                    subst=tel[-1]
+                sub=""
+                #print(chs,subno,v1,v2)
+                if subno!=-1:
+                    sub=tel[-2]
+                if(an=='y' and subno!=-1 and subno>=a1 and subno<=a2 and sub=='Annual'):
                     print('\nDownloading issue '+dmap[di].issue+' of comic '+names[0]+' ...\n')
                     done&=singlecomic(dmap[di].cname,dmap[di].issue,dmap[di].link,chapterpath,curdirpath)
-                if(chs=='y' and subno>=v1 and subno<=v2 and sub!='Annual'):
+                if(chs=='y' and subno!=-1 and subno>=v1 and subno<=v2 and sub!='Annual'):
                     print('\nDownloading issue '+dmap[di].issue+' of comic '+names[0]+' ...\n')
                     done&=singlecomic(dmap[di].cname,dmap[di].issue,dmap[di].link,chapterpath,curdirpath)
-                if ch=='n':
+                elif (subno==-1 or subst!="" or ch=='n'):
                     print('\nDownloading issue '+dmap[di].issue+' of comic '+names[0]+' ...\n')
                     done&=singlecomic(dmap[di].cname,dmap[di].issue,dmap[di].link,chapterpath,curdirpath)
             if done:
                 print('\nPdfs of all issues you want are ready :-D\nEnjoy reading',dmap[di].cname,'!\n')
+                sys.exit()
 
     #os.chdir(curdirpath)
     print()
@@ -217,36 +234,54 @@ def singlecomic(name,issue,url,chapterpath,curdirpath):
     return done
 
 def detectlinktype(site):
+    sitename=""
     isseries=False
     isissue=False
     hashttp=False
     hashttps=False
+    if site.find("readcomiconline")!=-1:
+        sitename="readcomiconline"
+    elif site.find("kissmanga")!=-1:
+        sitename="kissmanga"
+
     #comicex=re.compile('^http://[A-Za-z0-9]+.[A-Za-z]+/Comic')
     httpex=re.compile('^http\:\/\/')
     httpsex=re.compile('^https\:\/\/')
-    comicex=re.compile('((https?\:\/\/)?[A-Za-z0-9]+\.[A-Za-z]+/Comic/[A-Za-z0-9\-]+)')
-    issueex=re.compile('((https?\:\/\/)?[A-Za-z0-9]+\.[A-Za-z]+/Comic/[A-Za-z0-9\-]+/[A-Za-z0-9\-]+\?id=[0-9]+)')
+    if sitename=="readcomiconline":
+        comicex=re.compile('((https?\:\/\/)?[A-Za-z0-9]+\.[A-Za-z]+/Comic/[A-Za-z0-9\-]+)')
+        issueex=re.compile('((https?\:\/\/)?[A-Za-z0-9]+\.[A-Za-z]+/Comic/[A-Za-z0-9\-]+/[A-Za-z0-9\-]+\?id=[0-9]+)')
 
-    if comicex.match(site):
-        isseries=True
-        if issueex.match(site):
-            isissue=True
+        if comicex.match(site):
+            isseries=True
+            if issueex.match(site):
+                isissue=True
+    elif sitename=="kissmanga":
+        comicex=re.compile('((https?\:\/\/)?[A-Za-z0-9]+\.[A-Za-z]+/Manga/[A-Za-z0-9\-]+)')
+        issueex=re.compile('((https?\:\/\/)?[A-Za-z0-9]+\.[A-Za-z]+/Manga/[A-Za-z0-9\-]+/[A-Za-z0-9\-]+\?id=[0-9]+)')
+
+        if comicex.match(site):
+            isseries=True
+            if issueex.match(site):
+                isissue=True
 
     if httpex.match(site):
         hashttp=True
     elif httpsex.match(site):
         hashttps=True
 
-    return (isseries,isissue,hashttp,hashttps)
+    return (isseries,isissue,hashttp,hashttps,sitename)
 
 
 def extractnames(site,isissue):
     arr=site.split("/")
-    x=arr.index("Comic")+1
+    if ("Comic" in arr) and arr.index("Comic")!=-1:
+        x=arr.index("Comic")+1
+    elif ("Manga" in arr) and arr.index("Manga")!=-1:
+        x=arr.index("Manga")+1
     comicname=arr[x]
     issueno=""
     if isissue:
-        issueno=arr[x+1].split("?")[0]
+        issueno=arr[len(arr)-1].split("?")[0]
     return (comicname,issueno)
 
 def fetchcomic(url,curdirpath):
@@ -316,3 +351,4 @@ def createpdf(urls,sz,chapterpath,filename):
     print('\n\nBuilding pdf...\n')
     pdf.output(filename,"F")
 
+main()
